@@ -1,5 +1,13 @@
 # LogWidgets
 
+## Install plugins manually
+1. Download released version assets from Github.
+2. Unzip it.
+3. Click Load unpacked plugin, and select destination directory to the unziped folder.
+
+## Features
+- [x] GTD Matrix
+
 ## GTD Matrix
 
 The function-related styles are derived from cannibalox's
