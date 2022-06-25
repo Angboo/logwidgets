@@ -1,0 +1,152 @@
+@media only screen and (min-width: 768px) {
+    [data-refs-self*="gtd-matrix"] {
+        --matrix-caption-color: #fff;
+        --matrix-caption-bg: #0000;
+        --matrix-scrollbar-thumb: #f9f9f99e;
+        --matrix-scrollbar-track: #0000;
+        --matrix-outercaption-color: #979797b8;
+        --matrix-todo-bgcolor: #4bad003f;
+        --matrix-decide-bgcolor: #0068be5e;
+        --matrix-delegate-bgcolor: #bf830054;
+        --matrix-eliminate-bgcolor: #9c003e57;
+        --matrix-bullet-color: #d9d9d9;
+        --matrix-clover-borderstyle: 1px solid grey;
+    }
+
+    div[data-refs-self*="gtd-matrix"] > .block-children-container.flex > .block-children:before {
+        content: "↑ IMPORTANT";
+        position: absolute;
+        color: var(--matrix-outercaption-color);
+        font-size: 10px;
+        left: 45%;
+        top: 0;
+    }
+
+    div[data-refs-self*="gtd-matrix"] > .block-children-container.flex > .block-children:after {
+        content: "URGENT ←";
+        position: absolute;
+        color: var(--matrix-outercaption-color);
+        font-size: 10px;
+        left: -1rem;
+        top: 50%;
+    }
+
+    div[data-refs-self*="gtd-matrix"]:before {
+        content: "↓ NOT IMPORTANT";
+        position: absolute;
+        color: var(--matrix-outercaption-color);
+        font-size: 10px;
+        left: 46%;
+        bottom: -0.5rem;
+    }
+
+    div[data-refs-self*="gtd-matrix"]:after {
+        content: "→ NOT URGENT";
+        position: absolute;
+        color: var(--matrix-outercaption-color);
+        font-size: 10px;
+        right: -2rem;
+        top: 54%;
+    }
+
+    /* blocks / col */
+    div[data-refs-self*="gtd-matrix"] > .block-children-container.flex > .block-children > div.ls-block {
+        display: inline-block;
+        width: 46%;
+        overflow: auto;
+        margin: 5px;
+        height: 20rem;
+    }
+
+    /* clover section styling */
+    div[data-refs-self*="gtd-matrix"] > .block-children-container.flex > .block-children > .ls-block {
+        border: var(--matrix-clover-borderstyle);
+    }
+
+    div[data-refs-self*="gtd-matrix"] > .block-children-container.flex > .block-children > .ls-block:nth-last-child(4) {
+        /*border-radius: 0 2rem 0 2rem;*/
+    }
+
+    div[data-refs-self*="gtd-matrix"] > .block-children-container.flex > .block-children > .ls-block:nth-last-child(3) {
+        /*border-radius: 2rem 0 2rem 0;*/
+    }
+
+    div[data-refs-self*="gtd-matrix"] > .block-children-container.flex > .block-children > .ls-block:nth-last-child(2) {
+        /*border-radius: 2rem 0 2rem 0;*/
+    }
+
+    div[data-refs-self*="gtd-matrix"] > .block-children-container.flex > .block-children > .ls-block:nth-last-child(1) {
+        /*border-radius: 0 2rem 0 2rem;*/
+    }
+
+    /* clover contents */
+    div[data-refs-self*="gtd-matrix"] > .block-children-container.flex > .block-children > .ls-block > .block-children-container.flex > .block-children {
+        overflow: hidden;
+        min-height: 17rem;
+    }
+
+    div[data-refs-self*="gtd-matrix"] > .block-children-container.flex > .block-children > .ls-block > .block-children-container.flex > .block-children .bullet {
+        background-color: var(--matrix-bullet-color) !important;
+    }
+
+    /* scrollbar for each block */
+    div[data-refs-self*="gtd-matrix"] > .block-children-container.flex > .block-children > .ls-block > .block-children-container.flex > .block-children::-webkit-scrollbar-thumb {
+        background-color: var(--matrix-scrollbar-thumb);
+        border-radius: 0px;
+    }
+
+    div[data-refs-self*="gtd-matrix"] > .block-children-container.flex > .block-children > .ls-block > .block-children-container.flex > .block-children::-webkit-scrollbar-track {
+        background: var(--matrix-scrollbar-track);
+    }
+
+    /* block titles */
+    div[data-refs-self*="gtd-matrix"] > .block-children-container.flex > .block-children > div.ls-block > .flex.flex-row > .flex.flex-row > .flex-1 > .block-content {
+        font-weight: 700;
+        font-size: 0.7rem;
+        text-align: center;
+        margin-left: -1rem;
+    }
+
+    /* TODO : update this
+    div[data-refs-self*="gtd-matrix"]>.block-children-container.flex>.block-children>div.ls-block>.flex.flex-row>div>div>.block-content .page-reference {
+        background: var(--matrix-caption-bg);
+        border-radius: 10px;
+        color: var(--matrix-caption-color);
+    } */
+    /* remove bullet of the block title */
+    div[data-refs-self*="gtd-matrix"] > .block-children-container.flex > .block-children > div.ls-block > .flex.flex-row > div > a > .bullet-container > .bullet {
+        visibility: hidden;
+    }
+
+    /* remove indent line ~ margin-left of table cells */
+    div[data-refs-self*="gtd-matrix"] > .block-children-container.flex > .block-children > .ls-block > .block-children-container.flex > .block-children {
+        border: 0;
+        margin: 0px !important;
+    }
+
+    div[data-refs-self*="gtd-matrix"] > .block-children-container.flex > .block-children {
+        border: none;
+        margin: 1rem 0px 0 30px !important;
+    }
+
+    div[data-refs-self*="gtd-matrix"] > .block-children-container.flex > .block-children > div.ls-block > .block-children-container.flex > .block-children .bullet-container:after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        width: 6px;
+        height: 6px;
+        background-color: var(--matrix-bullet-color);
+        transition: transform .2s;
+        opacity: 1;
+    }
+
+    /* fix styling for queries */
+    div[data-refs-self*="gtd-matrix"] > .block-children-container.flex > .block-children > .ls-block .custom-query,
+    div[data-refs-self*="gtd-matrix"] > .block-children-container.flex > .block-children > .ls-block .block-highlight {
+        background-color: transparent;
+    }
+
+    div[data-refs-self*="gtd-matrix"] {
+        font-size: 0.75em
+    }
+}
