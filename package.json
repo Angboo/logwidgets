@@ -1,0 +1,31 @@
+{
+  "name": "LogWidgets",
+  "version": "0.0.1",
+  "description": "A collection of logseq widgets",
+  "main": "dist/index.html",
+  "targets": {
+    "main": false
+  },
+  "repository": "git@github.com:Angboo/logwidgets.git",
+  "author": "angboo",
+  "license": "MIT",
+  "dependencies": {
+    "@logseq/libs": "^0.0.6"
+  },
+  "devDependencies": {
+    "@parcel/transformer-inline-string": "2.6.2",
+    "parcel": "^2.6.2",
+    "typescript": "^4.2.4"
+  },
+  "scripts": {
+    "dev": "parcel public/index.html",
+    "build": "parcel build --public-url . --no-source-maps public/index.html"
+  },
+  "browserslist": [
+    "chrome 80"
+  ],
+  "logseq": {
+    "id": "logwidgets",
+    "icon": "./favicon.ico"
+  }
+}
