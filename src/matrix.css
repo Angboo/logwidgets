@@ -46,7 +46,7 @@
         color: var(--matrix-outercaption-color);
         font-size: 10px;
         right: -2rem;
-        top: 54%;
+        top: 52%;
     }
 
     /* blocks / col */
@@ -61,6 +61,31 @@
     /* clover section styling */
     div[data-refs-self*="gtd-matrix"] > .block-children-container.flex > .block-children > .ls-block {
         border: var(--matrix-clover-borderstyle);
+    }
+
+    div[data-refs-self*="gtd-matrix"] > .block-children-container > .block-children > div.ls-block > div > .block-content-wrapper {
+        font-size: 0.7rem;
+        text-align: center;
+        margin-left: -1rem;
+        margin-top: 4px;
+    }
+
+    div[data-refs-self*=gtd-matrix] > .block-children-container > .block-children > div.ls-block > .block-children-container > .block-children > div.ls-block > div {
+        padding: 0;
+    }
+
+    div[data-refs-self*="gtd-matrix"] > .block-children-container > .block-children > div.ls-block > .block-children-container {
+        margin: 0 !important;
+    }
+
+    div[data-refs-self*="gtd-matrix"] > .block-children-container > .block-children > div.ls-block > .block-children-container > .block-children > .ls-block > div > div {
+        margin: 0;
+        padding: 5px;
+        width: 100%;
+    }
+
+    div[data-refs-self*=gtd-matrix] > .block-children-container > .block-children > div.ls-block > .block-children-container > .block-children > div.ls-block > div > div:not(.block-content-wrapper,.editor-wrapper) {
+        display: none;
     }
 
     div[data-refs-self*="gtd-matrix"] > .block-children-container.flex > .block-children > .ls-block:nth-last-child(4) {
@@ -149,4 +174,32 @@
     div[data-refs-self*="gtd-matrix"] {
         font-size: 0.75em
     }
+
+    div[data-refs-self*="gtd-matrix"] .dsl-query > div > div > div.initial > div.content {
+        margin-right: 1rem;
+        margin-left: -1rem !important;
+        margin-top: -1rem !important;
+    }
+
+    div[data-refs-self*="gtd-matrix"] .custom-query {
+        margin: 0;
+    }
+
+    /*div[data-refs-self*="gtd-matrix"] .custom-query > div > .content {*/
+    /*    display: none;*/
+    /*}*/
+    div[data-refs-self*="gtd-matrix"] .custom-query > div > .initial > div > .content {
+        margin: 0 !important;
+    }
+
+    div[data-refs-self*="gtd-matrix"] .custom-query > div > .initial > div > .content > div > div {
+        margin: 0;
+        padding: 5px;
+        background: none;
+    }
+
+    div[data-refs-self*="gtd-matrix"] .custom-query > div > .initial > div > .content > div {
+        padding: 0;
+    }
+
 }
